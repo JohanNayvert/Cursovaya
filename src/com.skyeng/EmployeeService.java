@@ -21,58 +21,70 @@ public class EmployeeService {
         employees[9] = new Employee("Пломодьяло Татьяна Анатольевна", "Плановый отдел", 31_700);
     }
 
-    public void getPrintEmployeesList() {
-        for (Employee employee : this.employees) {
-            System.out.println(employee);
+    public double getPrintEmployeesList() {
+        for (int i = 0; i < this.employees.length; i++) {
+            if (employees[i] == null) continue;
+            System.out.println(employees[i]);
         }
         System.out.println();
+        return 0;
     }
 
-    public void getSumSalary() {
+    public double getPrintSumSalary() {
         double sumSalary = 0;
-        for (Employee employee : employees) {
-            sumSalary += employee.getSalary();
+        for (int i = 0; i < this.employees.length; i++) {
+            if (employees[i] == null) continue;
+            sumSalary += employees[i].getSalary();
         }
         System.out.printf("Сумма затрат на зраплату в месяц равна: %.2f\n", sumSalary);
         System.out.println();
+        return sumSalary;
     }
 
-    public void getMinSalary() {
+    public double getPrintMinSalary() {
         double minSalary = employees[0].getSalary();
-        for (Employee employee : employees) {
-            if (employee.getSalary() < minSalary) {
-                minSalary = employee.getSalary();
+        for (int i = 0; i < this.employees.length; i++) {
+            if (employees[i] == null) continue;
+            if (employees[i].getSalary() < minSalary) {
+                minSalary = employees[i].getSalary();
             }
         }
         System.out.printf("Минимальная зарплата равна: %.2f\n", minSalary);
         System.out.println();
+        return minSalary;
     }
 
-    public void getMaxSalary() {
+    public double getPrintMaxSalary() {
         double maxSalary = employees[0].getSalary();
-        for (Employee employee : employees) {
-            if (employee.getSalary() > maxSalary) {
-                maxSalary = employee.getSalary();
+        for (int i = 0; i < this.employees.length; i++) {
+            if (employees[i] == null) continue;
+            if (employees[i].getSalary() > maxSalary) {
+                maxSalary = employees[i].getSalary();
             }
         }
         System.out.printf("Максимальная зарплата равна: %.2f\n", maxSalary);
         System.out.println();
+        return maxSalary;
     }
 
-    public void getMeanSalary() {
+    public double getPrintMeanSalary() {
         double sumSalary = 0;
-        for (Employee employee : employees) {
-            sumSalary += employee.getSalary();
+        for (int i = 0; i < this.employees.length; i++) {
+            if (employees[i] == null) continue;
+            sumSalary += employees[i].getSalary();
         }
-        double meanSalary = sumSalary / employees.length;
+        double meanSalary = getPrintSumSalary() / employees.length;
         System.out.printf("Среднее значение зарплат ровно: %.2f\n", meanSalary);
         System.out.println();
+        return sumSalary;
     }
 
-    public void getPrintPersonList() {
-        for (Employee employee : this.employees) {
-            System.out.printf("Ф.И.О сотрудника: %s", employee.getPerson());
+    public double getPrintPrintPersonList() {
+        for (int i = 0; i < this.employees.length; i++) {
+            if (employees[i] == null) continue;
+            System.out.printf("Ф.И.О сотрудника: %s", employees[i].getPerson());
             System.out.println();
         }
+        return 0;
     }
 }

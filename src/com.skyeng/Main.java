@@ -8,11 +8,11 @@ public class Main {
         EmployeeService employeeService = new EmployeeService();
 
         employeeService.getPrintEmployeesList();
-        employeeService.getSumSalary();
-        employeeService.getMinSalary();
-        employeeService.getMaxSalary();
-        employeeService.getMeanSalary();
-        employeeService.getPrintPersonList();
+        employeeService.getPrintSumSalary();
+        employeeService.getPrintMinSalary();
+        employeeService.getPrintMaxSalary();
+        employeeService.getPrintMeanSalary();
+        employeeService.getPrintPrintPersonList();
 
         System.out.println();
         System.out.println("HomeWork Complete");
