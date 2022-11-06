@@ -5,6 +5,16 @@ public class Main {
         System.out.println("Cursovaya_1");
         System.out.println();
 
+        EmployeeService employeeService = new EmployeeService();
+
+        employeeService.getPrintEmployeesList();
+        employeeService.getPrintSumSalary();
+        employeeService.getPrintMinSalary();
+        employeeService.getPrintMaxSalary();
+        employeeService.getPrintMeanSalary();
+        employeeService.getPrintPrintPersonList();
+
+        System.out.println();
         System.out.println("HomeWork Complete");
     }
 }
